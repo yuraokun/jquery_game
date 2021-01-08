@@ -20,7 +20,7 @@
           <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Gsuess Numbers Game</a></li>
           <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
           <li class="menu-list"><a href="#">Contact</a></li>
-
+          <li><a href="#">my branch menu</a></li>
         </ul>
       </div>
     </div>
