@@ -90,7 +90,7 @@
 
 $(document).ready(function () {
 
-
+  console.log(pageType)
   $('.game').removeClass('active')
   $('.menu-list').removeClass('active')
   switch (pageType) {
@@ -104,6 +104,11 @@ $(document).ready(function () {
       $('.game').eq(1).addClass('active')
       $('.menu-list').eq(1).addClass('active')
       multipleStepGame();
+      break;
+    case 'formValidation':
+      $('.game').eq(2).addClass('active')
+      $('.menu-list').eq(2).addClass('active')
+      formValidation();
       break;
     default:
       $('.game').eq(0).addClass('active')
@@ -231,10 +236,31 @@ $(document).ready(function () {
       parent.css('display', 'none');
       mainContent.eq(index).css('display', 'block')
     })
-
-
   }
 
+
+  function formValidation() {
+    $('button#validate').click(validateMe);
+
+    // return false;
+    function validateMe() {
+
+
+
+      let error = [];
+      $('#myForm input').each(function () {
+
+        console.log($(this).val())
+      })
+
+
+      if (error.length > 0) {
+        $('#myForm').submit();
+      }
+
+
+    }
+  }
 
 
 

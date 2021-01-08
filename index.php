@@ -4,6 +4,7 @@
 
 $pageType = "";
 if (isset($_GET['pagetype'])) {
+
   $pageType = $_GET['pagetype'];
 }
 
@@ -30,9 +31,11 @@ if (isset($_GET['pagetype'])) {
     </div>
   </div>
 
+
+
   <div class="game" id="multipleStepGame">
 
-    <form action="#">
+    <div>
 
       <div class="content">
         <div class="step">
@@ -57,7 +60,38 @@ if (isset($_GET['pagetype'])) {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+
+
+  <div class="game" id='formValidation'>
+
+    <form method='get' action='#' id="myForm">
+
+      <label for="first">FirstName: </label>
+      <input type="text" name="first">
+
+      <label for="last">LastName: </label>
+      <input type="text" name="last">
+
+      <label for="email">Email: </label>
+      <input type="text" name="email">
+
+      <label for="password">Password: </label>
+      <input type="password" name="password">
+      <input type="hidden" name="pagetype" value='formValidation'>
+      <button type="button" id='validate'>Submit</button>
     </form>
+
+    <div class="message">
+      <?php
+      if (isset($_GET['password'])) {
+        echo "<h2> you are loged in !! </h2>";
+      }
+      ?>
+    </div>
+
   </div>
 
 

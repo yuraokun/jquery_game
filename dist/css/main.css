@@ -54,6 +54,7 @@ header a {
 
 .game.active {
   display: flex;
+  flex-direction: column;
 }
 
 /*  Guess Number Game   */
@@ -86,4 +87,12 @@ header a {
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+
+#formValidation form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 50px;
 }
