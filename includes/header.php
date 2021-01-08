@@ -20,12 +20,9 @@
           <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Gsuess Numbers Game</a></li>
           <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
           <li class="menu-list"><a href="#">Contact</a></li>
-<<<<<<< HEAD
-          <li><a href="#">my branch menu</a></li>
-=======
-          <li>honda yuki</li>
 
->>>>>>> 689fa47c2d1e91e6553de1829a0c88a774523e3c
+
+
         </ul>
       </div>
     </div>
