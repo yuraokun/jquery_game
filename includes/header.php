@@ -19,7 +19,8 @@
         <ul class="menu">
           <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Guess Numbers Game</a></li>
           <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
-          <li class="menu-list"><a href="#">Contact</a></li>
+          <li class="menu-list"><a href="#">Special Contact</a></li>
+          <li><a href="#">hello mark</a></li>
         </ul>
       </div>
     </div>
