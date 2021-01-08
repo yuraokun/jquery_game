@@ -20,7 +20,8 @@
           <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Gsuess Numbers Game</a></li>
           <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
           <li class="menu-list"><a href="#">Contact</a></li>
-          <li>honda yuki</li>
+
+
 
         </ul>
       </div>
