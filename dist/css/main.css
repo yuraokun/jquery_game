@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  background-color: cadetblue;
+  color: white;
+  width: 100%;
+  height: 70px;
+}
+
+header a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 1200px;
+
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header {
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-list {
+  margin-left: 25px;
+  transition: all 0.3s;
+}
+.menu-list:hover,
+.menu-list.active {
+  color: blue;
+}
+
+.game {
+  display: none;
+}
+
+.game.active {
+  display: flex;
+}
+
+/*  Guess Number Game   */
+
+#guessNumberGame {
+  min-height: calc(100vh - 70px);
+  background-color: aquamarine;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#multipleStepGame {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  padding: 20px;
+  background-color: blanchedalmond;
+  transition: all 0.3s ease;
+}
+#multipleStepGame form {
+  width: 100%;
+  min-height: 100%;
+}
+
+#multipleStepGame .content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
