@@ -111,7 +111,7 @@ $(document).ready(function () {
     // console.log(url);
     setTimeout(() => {
       window.location.href = url;
-    }, 400);
+    }, 300);
 
   })
 
