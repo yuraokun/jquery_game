@@ -9,22 +9,40 @@
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="header">
-        <div class="logo">
-          <h1>Logo</h1>
+
+  <ul class="mobile-menu">
+    <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Guess Numbers Game</a></li>
+    <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
+
+    <li class="menu-list"><a href="./index.php?pagetype=formValidation">Form Validation</a></li>
+    <li class="menu-list"><a href="./index.php?pagetype=colorMatchGame">Color Match Game</a></li>
+
+  </ul>
+
+  <div class="container">
+
+
+    <header>
+      <div class="wrap">
+        <div class="header">
+          <div class="logo">
+            <h1>Logo</h1>
+          </div>
+
+          <!-- <ul class="menu">
+            <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Guess Numbers Game</a></li>
+            <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
+
+            <li class="menu-list"><a href="./index.php?pagetype=formValidation">Form Validation</a></li>
+            <li class="menu-list"><a href="./index.php?pagetype=colorMatchGame">Color Match Game</a></li>
+
+          </ul> -->
+
+          <div class="humberger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-
-        <ul class="menu">
-          <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Guess Numbers Game</a></li>
-          <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
-
-
-          <li class="menu-list"><a href="./index.php?pagetype=formValidation">Form Validation</a></li>
-
-
-        </ul>
       </div>
-    </div>
-  </header>
+    </header>

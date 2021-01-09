@@ -90,6 +90,35 @@
 
 $(document).ready(function () {
 
+
+  $('.humberger').click(toggleMenu)
+
+  function toggleMenu() {
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open');
+      $('.container').removeClass('open');
+    } else {
+      $(this).addClass('open');
+      $('.container').addClass('open');
+      console.log($(this).attr('class'))
+    }
+  }
+
+  $('.menu-list a').click(function (e) {
+    e.preventDefault();
+    toggleMenu.call($('.humberger'));
+    const url = $(this).attr('href');
+    // console.log(url);
+    setTimeout(() => {
+      window.location.href = url;
+    }, 400);
+
+  })
+
+
+
+
+
   console.log(pageType)
   $('.game').removeClass('active')
   $('.menu-list').removeClass('active')
@@ -242,23 +271,40 @@ $(document).ready(function () {
   function formValidation() {
     $('button#validate').click(validateMe);
 
-    // return false;
+
+
+
     function validateMe() {
+      let okay = true;
 
-
-
-      let error = [];
       $('#myForm input').each(function () {
+        if (!$(this).val()) {
+          $(this).next().html('<span style="color: orange;">the field can not be empty</span>')
 
-        console.log($(this).val())
+          okay = false;
+        } else if ($(this).attr('name') == "email" && !validateEmail($(this).val())) {
+          $(this).next().html('<span style="color: orange;">it is a not valid email address</span>')
+          okay = false;
+        } else if ($(this).attr('name') == "password" && $(this).val().length < 5) {
+          $(this).next().html('<span style="color: orange;">password needs to be more than 5 characters</span>')
+          okay = false;
+        } else {
+          $(this).next().html('')
+        }
+
+
       })
 
 
-      if (error.length > 0) {
+      if (okay) {
         $('#myForm').submit();
       }
+    }
 
-
+    function validateEmail(email) {
+      const regexp = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
+      let result = regexp.test(email);
+      return result;
     }
   }
 
