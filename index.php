@@ -102,6 +102,133 @@ if (isset($_GET['pagetype'])) {
   </div>
 
 
+  <div class="game" id="colorMatchGame">
+    <h1>Color Match Game</h1>
+    <div id="start">Start Game</div>
+
+    <div id="gamearea">
+      <div id="findme">Match this color<br><span id="message"></span></div>
+      <div id="output"></div>
+    </div>
+
+  </div>
+
+
+  <div class="game" id="jqueryTestPage">
+    <h1>jQuery Test Page</h1>
+
+    <div class="textFields">
+      <div class="row">
+        <button class="show">SHOW ALL</button>
+        <button class="send">SEND INFO</button>
+
+      </div>
+      <div class="row">
+        <label for="">Color</label>
+        <select name="colors" id="">
+          <option value="">select color</option>
+          <option value="red">red</option>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="">Name</label>
+        <input name="name" type="text" placeholder='Name'>
+      </div>
+      <div class="row">
+        <label for="">Age</label>
+        <input name="age" type="text" placeholder='Age'>
+      </div>
+    </div>
+    <ul class="testBox">
+      <li class="test-list">test list<span>1</span></li>
+      <li class="test-list">test list<span>2</span></li>
+      <li class="test-list">test list<span>3</span></li>
+      <li class="test-list">test list<span>4</span></li>
+      <li class="test-list">test list<span>5</span></li>
+      <li class="test-list">test list<span>6</span></li>
+    </ul>
+
+    <div class="infoBox">
+      <h3>Info Box</h3>
+      <div class="infoBox-list">
+
+      </div>
+    </div>
+
+    <div class="infoImg" style='margin: 30px auto; display: block; '>
+      <input type="text" placeholder="img text">
+      <div class="infoBtns">
+        <button class="slideup">Slide Up</button>
+        <button class="slidedown">Slide Down</button>
+        <button class="slidetoggle">Slide Toggle</button>
+        <button class="fadeIn">Fade In</button>
+        <button class="fadeOut">Fade Out</button>
+        <button class="fadeToggle">Fade Toggle</button>
+        <button class="fadeTo">Fade To</button>
+      </div>
+
+      <li>
+        <img src="http://via.placeholder.com/350x150" alt="">
+      </li>
+
+    </div>
+  </div>
+
+
+
+  <div class="game" id="jqueryAnimationPage">
+    <h1 style='text-align: center; margin-bottom: 10px'>jQuery Animation Page</h1>
+    <ul style='display: flex'>
+      <li class="link"><a href="#section1">Section 1</a></li>
+      <li class="link"><a href="#section2">Section 2</a></li>
+      <li class="link"><a href="#section3">Section 3</a></li>
+      <li class="link"><a href="#section4">Section 4</a></li>
+    </ul>
+    <div class="animeP-register">
+      <div>
+        <label for="">data</label>
+        <input type="text">
+        <button>Submit</button>
+        <div class="dataText"></div>
+      </div>
+
+
+    </div>
+
+    <div class="animation-images">
+      <img src="//unsplash.it/1705/800" alt="">
+    </div>
+
+
+    <div id="section1" class="section">section 1</div>
+    <div id="section2" class="section">section 2</div>
+    <div id="section3" class="section">section 3</div>
+    <div id="section4" class="section">section 4</div>
+
+
+
+
+  </div>
+
+
+  <div class="game" id="ajax">
+    ajax
+
+    <div class="btns">
+      <button class="btnA">SubmitA</button>
+      <button class="btnB">SubmitB</button>
+    </div>
+    <div class="result">
+      <h2>Result</h2>
+    </div>
+    <hr>
+    <div class="result2">
+      <h2>Result2</h2>
+    </div>
+  </div>
+
 </main>
 </div>
 
