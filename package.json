@@ -1,9 +1,11 @@
 {
   "name": "jquery-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "test1 test2",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
   "devDependencies": {
     "jquery": "^3.5.1"
   },
@@ -11,5 +13,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuraokun/jquery_game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuraokun/jquery_game/issues"
+  },
+  "homepage": "https://github.com/yuraokun/jquery_game#readme"
 }

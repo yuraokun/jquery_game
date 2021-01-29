@@ -161,3 +161,10 @@ header a {
   align-items: center;
   margin-top: 50px;
 }
+
+#colorMatchGame {
+  background-color: whitesmoke;
+  min-height: calc(100vh - 70px);
+  padding: 50px 0;
+  text-align: center;
+}

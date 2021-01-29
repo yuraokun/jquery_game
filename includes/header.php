@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,9 @@
 
     <li class="menu-list"><a href="./index.php?pagetype=formValidation">Form Validation</a></li>
     <li class="menu-list"><a href="./index.php?pagetype=colorMatchGame">Color Match Game</a></li>
-
+    <li class="menu-list"><a href="./index.php?pagetype=jqueryTestPage">jQuery Test Page</a></li>
+    <li class="menu-list"><a href="./index.php?pagetype=jqueryAnimationPage">jQuery Animation Page</a></li>
+    <li class="menu-list"><a href="./index.php?pagetype=ajax">Ajax</a></li>
   </ul>
 
   <div class="container">
