@@ -1,3 +1,9 @@
+<?php
+include_once("./db/database.php")
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,6 +17,7 @@
 <body>
 
   <ul class="mobile-menu">
+    <li><a href="./index.php?pageType=home">Home</a></li>
     <li class="menu-list"><a href="./index.php?pagetype=guessNumbersGame">Guess Numbers Game</a></li>
     <li class="menu-list"><a href="./index.php?pagetype=multipleStepGame">Multiple Step Game</a></li>
 
@@ -19,6 +26,7 @@
     <li class="menu-list"><a href="./index.php?pagetype=jqueryTestPage">jQuery Test Page</a></li>
     <li class="menu-list"><a href="./index.php?pagetype=jqueryAnimationPage">jQuery Animation Page</a></li>
     <li class="menu-list"><a href="./index.php?pagetype=ajax">Ajax</a></li>
+
   </ul>
 
   <div class="container">

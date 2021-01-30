@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 
 
-
+  console.log(pageType + 1)
 
   // console.log(pageType)
   $('.game').removeClass('active')
@@ -126,47 +126,107 @@ $(document).ready(function () {
   switch (pageType) {
 
     case 'guessNumbersGame':
-      $('.game').eq(0).addClass('active')
-      $('.menu-list').eq(0).addClass('active')
+      $('.game').eq(1).addClass('active')
+      $('.menu-list').eq(1).addClass('active')
       guessNumberGame();
       break;
     case 'multipleStepGame':
-      $('.game').eq(1).addClass('active')
-      $('.menu-list').eq(1).addClass('active')
+      $('.game').eq(2).addClass('active')
+      $('.menu-list').eq(2).addClass('active')
       multipleStepGame();
       break;
     case 'formValidation':
-      $('.game').eq(2).addClass('active')
-      $('.menu-list').eq(2).addClass('active')
+      $('.game').eq(3).addClass('active')
+      $('.menu-list').eq(3).addClass('active')
       formValidation();
       break;
     case 'colorMatchGame':
-      $('.game').eq(3).addClass('active')
-      $('.menu-list').eq(3).addClass('active')
+      $('.game').eq(4).addClass('active')
+      $('.menu-list').eq(4).addClass('active')
       colorMatchGame();
       break;
     case 'jqueryTestPage':
-      $('.game').eq(4).addClass('active')
-      $('.menu-list').eq(4).addClass('active')
+      $('.game').eq(5).addClass('active')
+      $('.menu-list').eq(5).addClass('active')
       jqueryTestPage();
       break;
     case 'jqueryAnimationPage':
-      $('.game').eq(5).addClass('active')
-      $('.menu-list').eq(5).addClass('active')
+      $('.game').eq(6).addClass('active')
+      $('.menu-list').eq(6).addClass('active')
       jqueryAnimationPage();
       break;
     case 'ajax':
-      $('.game').eq(6).addClass('active')
-      $('.menu-list').eq(6).addClass('active')
+      $('.game').eq(7).addClass('active')
+      $('.menu-list').eq(7).addClass('active')
       ajax();
       break;
     default:
       $('.game').eq(0).addClass('active')
       $('.menu-list').eq(0).addClass('active')
-      guessNumberGame();
+      home();
       break;
   }
 
+
+  function home() {
+
+    const name = $('.home_name');
+    const btn = $('.home_btn');
+
+    btn.click(getName);
+
+
+    function getName() {
+      const value = name.val();
+      name.val("");
+
+      const obj = {
+        name: "honda",
+        age: "34"
+      }
+      send(obj);
+    }
+
+    function send(val) {
+      $.ajax({
+        //POST通信
+        type: "POST",
+        //ここでデータの送信先URLを指定します。
+        url: "ajax.php",
+        data: { key: JSON.stringify(val) },
+        dataType: 'json',
+        //処理が成功したら
+        success: function (data, dataType) {
+          //HTMLファイル内の該当箇所にレスポンスデータを追加する場合
+          $('.ajax_res').text(data);
+          console.log(data)
+          // load();
+        },
+        //処理がエラーであれば
+        error: function (e) {
+          console.log(e.responseText + " 2");
+
+        }
+      });
+    }
+
+    function load() {
+      $.ajax({
+        url: "./TEST.json",
+        type: "get",
+        dataTYpe: 'json',
+        success: function (data) {
+          let text = JSON.parse(data);
+          $('.ajax_res').text(text.name + text.age);
+        },
+        error: function (data) {
+          alert("申し訳ありません。読み込みに失敗しました。");
+        }
+      })
+    }
+
+
+  }
 
 
   function guessNumberGame() {

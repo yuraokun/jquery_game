@@ -3,6 +3,27 @@
 <?php
 
 $pageType = "";
+$name = "";
+if (isset($_POST['key'])) {
+  $name = $_POST['key'];
+  $name = json_decode($name, true);
+
+  $json = file_get_contents("./TEST.json");
+  echo $data . " json";
+  $data = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+
+  $data = json_decode($data, true);
+
+  echo $data . " data";
+
+  $data = json_encode($data);
+  // define("TESTFILE", "./TEST.txt");
+
+
+  // file_put_contents(TESTFILE, $name);
+
+
+}
 if (isset($_GET['pagetype'])) {
 
   $pageType = $_GET['pagetype'];
@@ -10,11 +31,35 @@ if (isset($_GET['pagetype'])) {
 
 
 
+$sql = "select * from user";
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+
+var_dump($stmt);
+
 
 ?>
 
 
 <main class='main'>
+
+
+
+  <div class="game" id="home" style="background-color: green;">
+    <img src="./test2.png" alt="" width="500px">
+    <!-- <?php
+          while ($row = $stmt->fetch()) {
+            echo $row['user_name'];
+          }
+
+          ?> -->
+
+
+
+
+
+
+  </div>
 
   <div class="game" id='guessNumberGame'>
 
